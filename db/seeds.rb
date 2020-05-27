@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# @response = Faraday.get 'https://api.propublica.org/congress/v1/116/senate/members.json' do |rep|
+#   req.headers['X-API-KEY'] = ENV['propublica_api_key']
+# end
+# senate_data = JSON.parse(@response.body)
+# senators = senate_data['results'][0]['members']
+#
+# senators.each do |senator|
+#   Member.create!(
+#     chamber: 'senate'
+#   )
+# end
